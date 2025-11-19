@@ -1,0 +1,12 @@
+{
+    "powermode.enabled": true,
+    "powermode.presets": "particles",
+    "powermode.combo.location": "editor",
+    "powermode.combo.counterEnabled": "show",
+    "powermode.combo.counterSize": 2,
+    "powermode.combo.timeout": 1,
+    "powermode.shake.intensity": 3,
+    "powermode.combo.timerEnabled": "show",
+    "powermode.explosions.backgroundMode": "mask",
+    "powermode.combo.threshold": 3
+}
