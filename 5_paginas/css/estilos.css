@@ -2,11 +2,10 @@ body {
     background-image:url(../images/fondo.jpg) ;
     text-align: center;
     overflow: hidden;
-   
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 h1 {
