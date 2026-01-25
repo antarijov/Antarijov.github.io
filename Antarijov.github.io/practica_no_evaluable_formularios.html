@@ -1,0 +1,115 @@
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+<body>
+   <h1></h1>
+   <table align="center" width="90%">
+    <tr>
+        <td colspan="3" width="60%" valign="top">
+           <fieldset>
+    <legend>
+        <b>Datos personales</b>
+    </legend>
+    <form action=" http://ncoge.com/phps/formulario.php">
+        <br>
+        Nombre: <input type="text" 
+        name="Nombre">
+        <br>
+        <br>
+        Apellido: <input type="text" 
+        name="Apellidos">
+        <br>
+        <br>
+        Correo: <input type="text" 
+        name="Correo">
+        <br>
+        <br>
+        Hobies: <textarea name="Hobies" id=""></textarea>
+   
+  </fieldset> 
+        </td>
+        <td width="40%">
+            <fieldset>
+                <legend>
+                   <b>Idiomas</b> 
+                </legend>
+                Puntua tu nivel de idiomas del 1 a 5: <br>
+                <b>Inglés:</b>
+        <input type="radio" name="Inglés" value="1" checked="checked" /> 1
+        <input type="radio" name="Inglés" value="2" /> 2
+        <input type="radio" name="Inglés" value="3" /> 3
+        <input type="radio" name="Inglés" value="4" /> 4
+        <input type="radio" name="Inglés" value="5" /> 5
+        
+        <br>
+        <br>
+
+         <b>Español:</b>
+        <input type="radio" name="Español" value="1" checked="checked" /> 1
+        <input type="radio" name="Español" value="2" /> 2
+        <input type="radio" name="Español" value="3" /> 3
+        <input type="radio" name="Español" value="4" /> 4
+        <input type="radio" name="Español" value="5" /> 5
+        
+        <br>
+        <br>
+
+        <b>Alemán:</b>
+        <input type="radio" name="Alemán" value="1" checked="checked" /> 1
+        <input type="radio" name="Alemán" value="2" /> 2
+        <input type="radio" name="Alemán" value="3" /> 3
+        <input type="radio" name="Alemán" value="4" /> 4
+        <input type="radio" name="Alemán" value="5" /> 5
+            </fieldset>
+           
+            <fieldset>
+                <legend>
+                    <b>Domino los siguientes Programas</b>
+                </legend>
+                <table width="45%" align="center">
+                    <tr>
+                        <td>
+                            <br><input name="Writer" type="checkbox" value="direccion"/> Writer 
+                            <br><input name="Calc" type="checkbox" value="empleado"/> Calc
+                        </td>
+
+                        <td>
+                            <br><input name="Bash" type="checkbox" value="tecnico"/> Bash
+                            <br><input name="Impress" type="checkbox" value="empleado"/> Impress
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                   <b>Trabajo con el siguiente Sistema Operativo:</b> 
+                </legend>
+                <select id="so" name="so">
+                <option value="" selected="selected">- selecciona -</option>
+                <option value="windows">Windows</option>
+                <option value="mac">Mac</option>
+                <option value="linux">Linux</option>
+                <option value="otro">Otro
+            </fieldset>
+        </td>
+    </tr>
+  
+
+
+<tr align="center">
+    <td colspan="2">
+            <input type="reset" value="Reiniciar"  ></input>
+    </td>
+     
+</tr>
+
+</table>
+</form> 
+</body>
+</html>

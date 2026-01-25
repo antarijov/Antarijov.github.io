@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/fonfop.jpg');
+  background-size: cover;
+  font-family: 'Indie Flower', cursive;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #007de4;
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+}
+#menu li { display: inline; margin: 0 15px; }
+
+#menu a { color: white; text-decoration: none; font-family: 'Pacifico'; }
+#menu a:hover { text-decoration: underline; }
+
+#header {
+  text-align: center;
+  background-color: rgba(0, 153, 255, 0.8);
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+}
+.portada { float: right; width: 80px; height: auto; border: 1px solid white;}
+
+#cookieEU {
+  position: fixed;
+  top: 35%;
+  left: 20%;
+  right: 20%;
+  background: rgb(255, 228, 179);
+  border: 3px solid rgb(12, 1, 89);
+  padding: 20px;
+  text-align: center;
+  z-index: 2000;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+#content {
+  width: 95%;
+  margin: 20px auto;
+  overflow: hidden;
+  background-color: rgb(184, 235, 237);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#imageRight {
+  float: right;
+  width: 20%;
+}
+.social {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 10px auto;
+
+}
+
+#c-central {
+  float: left;
+  width: 75%;
+}
+
+.fuego {
+  background-color: rgba(255, 160, 122, 0.9);
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+.planta {
+  background-color: rgba(144, 238, 144, 0.9);
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+.agua {
+  background-color: rgba(135, 206, 250, 0.9);
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+.der {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #3b3b3b;
+  float: right; margin-left: 20px;
+}
+.izq {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #333;
+  float: left; margin-right: 20px;
+}
+
+.info { text-align: justify; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #007ade;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-top: 3px solid black;
+}
+
+.button {
+  background: blue;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  #c-central, #imageRight {
+    float: none;
+    width: 100%;
+  }
+  .social {
+    display: inline-block;
+    margin: 10px;
+  }
+  .intercalada {
+    float: none;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+}
