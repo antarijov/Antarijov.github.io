@@ -1,0 +1,36 @@
+body {
+    background-image:url(../images/fondo.jpg) ;
+    text-align: center;
+    overflow: hidden;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+h1 {
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    border-left: 10px solid rgb(255, 0, 0);
+    text-align: center; 
+  
+}
+
+img {
+    border: 5px solid black;
+    width: 300px;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 5px rgb(0, 0, 0); 
+}
+ul {
+    list-style-type: none; 
+    padding: 10px; 
+    margin: 50px;
+}
+li {
+    display: inline; 
+    border: 1px solid rgb(0, 0, 0); 
+    padding: 5px 10px;
+    margin: 10px; 
+}
+

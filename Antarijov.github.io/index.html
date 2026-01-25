@@ -1,0 +1,345 @@
+<!--<HTML> 
+
+<head>
+
+  <meta charset="UTF-8">
+  <title Mis prácticas></title>
+
+</head>
+
+<body  background="../Antarijov.github.io/images/batseñal.webp">
+   <font color="white"><h1 align="center" > Mis Prácticas</h1></font>
+  <hr color="white"size="7" width="100%"> 
+    <table align="center">
+      <tr>
+         <td width="50%"><li><a href="curriculum.html"><font color="white" size="5">Práctica 1 </font></a></li></td>
+         <td rowspan="30" width="50%"><img src="./images/image.jpg"  width="600"></td>
+       </tr>
+      
+      
+       <tr>
+         <td width="50%"><li><a href="practica_no_evaluable_formularios.html"><font color="white" size="5">Práctica 2 </font></a></li>
+         </td>
+      </tr>
+
+      <tr>
+         <td width="50%"><li><a href="./5_paginas/index.html"><font color="white" size="5">Práctica 3 </font></a></li>
+         </td>
+      </tr>
+     </table>
+  
+ 
+ 
+
+</body>
+</HTML>
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Prácticas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --batman-yellow: #FFD700;
+      --batman-dark: #0D0D0D;
+      --batman-gray: #1A1A1A;
+      --batman-light-gray: #2E2E2E;
+      --batman-blue: #0066CC;
+      --neon-glow: 0 0 10px var(--batman-yellow), 0 0 20px var(--batman-yellow), 0 0 30px var(--batman-yellow);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: 
+        radial-gradient(circle at 50% 20%, rgba(13, 13, 13, 0.9), rgba(0, 0, 0, 0.95)),
+        url('../Antarijov.github.io/images/batseñal.webp') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Rajdhani', sans-serif;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 80% 10%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 90%, rgba(0, 102, 204, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      width: 100%;
+    }
+    
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--batman-yellow);
+      text-shadow: var(--neon-glow);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.1), transparent);
+      border: 2px solid var(--batman-yellow);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      animation: pulse 3s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+      50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); }
+      100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+    }
+    
+    .divider {
+      height: 4px;
+      width: 80%;
+      margin: 0 auto;
+      background: linear-gradient(to right, transparent, var(--batman-yellow), transparent);
+      border-radius: 2px;
+      box-shadow: 0 0 10px var(--batman-yellow);
+    }
+    
+    .content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+    
+    .practices-list {
+      flex: 1;
+      background: rgba(26, 26, 26, 0.8);
+      border: 1px solid var(--batman-light-gray);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .practices-list:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    }
+    
+    .practices-list h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--batman-yellow);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+      text-shadow: 0 0 5px var(--batman-yellow);
+      border-bottom: 1px solid var(--batman-yellow);
+      padding-bottom: 0.5rem;
+    }
+    
+    .practice-item {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .practice-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .practice-item a {
+      display: block;
+      padding: 1.2rem 1.5rem;
+      background: rgba(46, 46, 46, 0.7);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .practice-item a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+      transition: left 0.5s ease;
+      z-index: -1;
+    }
+    
+    .practice-item a:hover {
+      background: rgba(255, 215, 0, 0.1);
+      border-color: var(--batman-yellow);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      transform: translateX(10px);
+    }
+    
+    .practice-item a:hover::before {
+      left: 100%;
+    }
+    
+    .practice-item a::after {
+      content: '→';
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease, right 0.3s ease;
+      color: var(--batman-yellow);
+    }
+    
+    .practice-item a:hover::after {
+      opacity: 1;
+      right: 1rem;
+    }
+    
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    .batman-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      border: 3px solid var(--batman-yellow);
+      box-shadow: var(--neon-glow), 0 10px 30px rgba(0, 0, 0, 0.7);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      filter: grayscale(20%) contrast(110%);
+    }
+    
+    .batman-image:hover {
+      transform: scale(1.03);
+      box-shadow: 
+        0 0 20px var(--batman-yellow), 
+        0 0 40px rgba(255, 215, 0, 0.5),
+        0 10px 40px rgba(0, 0, 0, 0.8);
+      filter: grayscale(0%) contrast(120%);
+    }
+    
+    .bat-logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      opacity: 0.7;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .practices-list, .image-container {
+        width: 100%;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 1rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mis Prácticas</h1>
+      <div class="divider"></div>
+    </header>
+    
+    <div class="content">
+      <div class="practices-list">
+        <h2>Lista de Prácticas</h2>
+        <ul>
+          <li class="practice-item">
+            <a href="curriculum.html">Práctica 1 - Curriculum</a>
+          </li>
+          <li class="practice-item">
+            <a href="practica_no_evaluable_formularios.html">Práctica 2 - Formularios</a>
+          </li>
+          <li class="practice-item">
+            <a href="./5_paginas/index.html">Práctica 3 - 5 Páginas</a>
+          </li>
+          <li class="practice-item">
+            <a href="./Ej4/index.html">Práctica 4 - Youtubers</a>
+          </li>
+          <li class="practice-item">
+            <a href="./Float1/index.html">Práctica 5 - Float</a>
+          </li>
+          <li class="practice-item">
+            <a href="./EXTRAFLOAT/index.html">Práctica 6 - Float</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="image-container">
+        <img src="./images/image.jpg" alt="Batman" class="batman-image">
+      </div>
+    </div>
+    
+   
+  </div>
+  
+ </body>
+</html>
