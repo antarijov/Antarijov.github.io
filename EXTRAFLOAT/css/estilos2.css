@@ -1,0 +1,223 @@
+/* ======= RESET ======= */
+* {
+  margin: 0px auto;
+  box-sizing: border-box; /* Recomendado para que los paddings no rompan el ancho */
+}
+
+/* ======= BODY ======= */
+body {
+  background: url('../images/fonfop.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* IMPORTANTE: Esto fija el fondo para que no se mueva al hacer scroll  */
+  background-attachment: fixed; 
+  font-family: 'Ortem', cursive;
+  padding-top: 40px; /* Espacio para que el menú fijo no tape el principio */
+}
+
+/* ======= MENU (Requisito 1: Siempre arriba) ======= */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #007de4;
+  border-bottom: 2px solid #ffffff;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
+  z-index: 1000; /* Para que esté por encima de todo */
+  padding: 10px 0;
+}
+#menu ul { color: white; list-style: none; }
+#menu li { display: inline; padding: 0 15px; }
+#menu a { color: white; text-decoration: none; }
+#menu li a:hover { color: #443266; text-decoration: underline; }
+
+/* ======= HEADER ======= */
+#header {
+  margin-top: 20px; /* Separación del menú */
+  text-align: right;
+  background-color: rgba(21, 136, 212, 0.9); /* Un poco transparente queda mejor */
+  border-bottom: 5px solid #a3c2ff;
+  border-top: 5px solid #a3c2ff;
+  color: white;
+  padding: 10px;
+  overflow: hidden; /* Para contener la imagen flotante si la hubiera */
+}
+.portada {
+  float: right;
+  border: 1px solid #002fff;
+  border-radius: 20px;
+  width: 150px;
+  margin-left: 20px;
+  background-color: white;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 45px;
+  line-height: 1.2;
+}
+
+/* ======= ESTRUCTURA PRINCIPAL (FLOAT) ======= */
+#main-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto; /* Centrado */
+  overflow: hidden; /* Truco para contener los floats internos */
+  padding-bottom: 80px; /* Espacio para no chocar con el footer */
+}
+
+/* --- SIDEBAR (Requisito 5: Flota a la derecha) --- */
+#sidebar {
+  float: right; /* Aquí está la clave del ejercicio */
+  width: 200px;
+  background-color: rgba(0, 152, 253, 0.9);
+  border: 5px solid #a3c2ff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 20px; /* Separación con el contenido */
+  text-align: center;
+  /* Ya NO es fixed, así que se moverá con la página */
+}
+
+#sidebar .side-link img {
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* --- CONTENT --- */
+#content {
+  /* Ocupa el resto del ancho. 
+     Calc resta el ancho del sidebar (200) + margen (20) + un poco de aire */
+  float: left;
+  width: calc(100% - 240px); 
+}
+
+/* ======= CAJAS DE IMAGENES (FLEX INTERNO) ======= */
+.imgbox {
+  background-color: rgba(0, 153, 255, 0.9);
+  color: white;
+  border: 5px solid #a3c2ff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  
+  display: flex; /* Mantenemos flex para el interior de la caja */
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Requisito 4: Alternar imágenes [cite: 72] */
+.imgbox.align-right {
+  flex-direction: row-reverse; 
+  text-align: right;
+}
+.imgbox.align-left {
+  text-align: left;
+}
+
+.imgwrap img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #0026ff;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.imgtext {
+  flex: 1; 
+}
+
+/* ======= COOKIES (Requisito 3) ======= */
+#cookieEU {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centrado exacto */
+  width: 60%;
+  border: 3px solid black;
+  background-color: rgb(255, 145, 0);
+  border-radius: 100px;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+  z-index: 2000;
+  text-align: center;
+}
+
+/* ======= FOOTER (Requisito 6) ======= */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px; /* Centrar texto verticalmente */
+  background-color: #007de4;
+  text-align: center;
+  color: white;
+  border-top: 3px solid black;
+  
+  /* IMPORTANTE: Clear para limpiar floats si no fuera fixed, 
+     pero como es fixed, necesitamos padding-bottom en el container */
+  z-index: 1000;
+}
+
+/* ======= BOTONES ======= */
+.button {
+  background-color: #003cff;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: white;
+  color: #003cff;
+}
+
+/* ======= MEDIA QUERIES (Requisito 8: Móvil) ======= */
+@media all and (max-width: 700px) {
+  /* Al hacer la pantalla pequeña, quitamos los floats */
+  #sidebar {
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+    display: flex; /* Convertimos sidebar en horizontal si quieres */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #sidebar .side-link img {
+    width: 60px; /* Iconos más pequeños en móvil */
+    display: inline-block;
+    margin: 5px;
+  }
+
+  #content {
+    float: none;
+    width: 100%;
+  }
+
+  .imgbox {
+    flex-direction: column !important; /* Forzar columna siempre en móvil */
+    text-align: center !important;
+  }
+  
+  #cookieEU {
+    width: 90%;
+    top: auto;
+    bottom: 60px; /* Que no tape el footer */
+    transform: translateX(-50%);
+  }
+}

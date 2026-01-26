@@ -7,8 +7,8 @@
 body {
   background: url('../images/fonfop.jpg');
   background-size: cover;
-  font-family: 'Indie Flower', cursive;
-  padding-top: 70px;
+  font-family: 'Alfa Slab One', sans-serif;
+  padding-top: 50px;
   padding-bottom: 70px;
 }
 
@@ -18,14 +18,23 @@ body {
   width: 100%;
   height: 50px;
   background-color: #007de4;
-  z-index: 1000;
   text-align: center;
   line-height: 50px;
 }
-#menu li { display: inline; margin: 0 15px; }
+#menu li { 
+  display: inline; 
+  margin:15px; 
+}
 
-#menu a { color: white; text-decoration: none; font-family: 'Pacifico'; }
-#menu a:hover { text-decoration: underline; }
+#menu a { 
+  color: white; 
+  text-decoration: none; 
+  font-family: inherit;
+  font-size: 18px;
+}
+#menu a:hover { 
+  text-decoration: underline; 
+}
 
 #header {
   text-align: center;
@@ -34,7 +43,12 @@ body {
   color: white;
   overflow: hidden;
 }
-.portada { float: right; width: 80px; height: auto; border: 1px solid white;}
+.portada { 
+  float: right; 
+  width: 100px; 
+  height: auto; 
+  border: 1px solid white;
+}
 
 #cookieEU {
   position: fixed;
@@ -49,18 +63,28 @@ body {
   box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
-#content {
-  width: 95%;
-  margin: 20px auto;
-  overflow: hidden;
-  background-color: rgb(184, 235, 237);
-  padding: 20px;
-  border-radius: 20px;
-}
-
 #imageRight {
   float: right;
   width: 20%;
+  position: relative;
+  background: linear-gradient(to bottom, rgb(220,50,50) 0%, rgb(220,50,50) 50%, #ffffff 50%, #ffffff 100%);
+  border-radius: 150px;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#imageRight::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 50%;
+  height: 5px;
+  background: #000;
+  transform: translateY(-50%);
+  border-radius: 200px;
+  pointer-events: none;
 }
 .social {
   width: 60px;
@@ -137,17 +161,59 @@ body {
 }
 
 @media (max-width: 600px) {
-  #c-central, #imageRight {
+  #c-central {
     float: none;
     width: 100%;
   }
   .social {
-    display: inline-block;
-    margin: 10px;
+    display: inline;
+    align-content: center;
+    margin: 15px;
+    width: 50px;
+    height: 50px;
   }
-  .intercalada {
+#menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #ff0000;
+  border: #000000 2px solid;
+  text-align: center;
+  line-height: 50px;
+}
+#menu a { 
+  color: white; 
+  text-decoration: none; 
+  font-family: inherit;
+  font-size: 10px;
+}
+body {
+  background: url('../images/images.jpeg');
+  background-size: cover;
+  font-family: 'Alfa Slab One', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#header {
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.801);
+  border: #000000 2px solid;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  background: #ff0000;
+  border: #000000 2px solid;
+  color: white;
+  text-align: center;
+  border-top: 3px solid black;
+}
+  #imageRight {
     float: none;
-    display: block;
-    margin: 0 auto 10px auto;
+    width: 100%;
   }
 }
