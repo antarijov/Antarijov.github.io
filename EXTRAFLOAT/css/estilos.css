@@ -211,6 +211,7 @@ body {
   color: white;
   text-align: center;
   border-top: 3px solid black;
+  font-size: 10px;
 }
   #imageRight {
     float: none;
